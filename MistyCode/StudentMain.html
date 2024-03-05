@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="StudentStyle.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <title>Alumno</title>
+</head>
+
+
+<body class="vh-100 overflow-auto">
+
+  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidyMid slice" viewBox="0 0 100 100">
+    <defs>
+      <style>
+        @keyframes rotate {
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+
+        .out-top {
+          animation: rotate 20s linear infinite;
+          transform-origin: 39px 36px;
+        }
+
+        .in-top {
+          animation: rotate 15s linear infinite;
+          transform-origin: 39px 36px;
+        }
+
+        .out-bottom {
+          animation: rotate 25s linear infinite;
+          transform-origin: 107px 91px;
+        }
+
+        .in-bottom {
+          animation: rotate 25s linear infinite;
+          transform-origin: 107px 91px;
+        }
+      </style>
+    </defs>
+    <path fill="#8789C0" class="out-top"
+      d="m31.49,70.34c16.29,3.86,51.14-.75,44.57-24.14-6.57-23.39-4.57-50.14-30.57-45.08S-13.29,17.51,6.63,45.06c18.29,25.28,24.86,25.28,24.86,25.28Z" />
+    <path fill="#C6D8D3" class="out-bottom"
+      d="m83.29,109.96c-.5-.75-.83-1.59-.99-2.48-.95-5.26-3.97-25.87,7.29-25.79,12.91.09,15.15-25.39,27.14-20.68,11.99,4.71,22.66,12.91,15.61,29.17-7.05,16.26-16.64,35.32-32.92,30.9-9.57-2.6-14.41-8.52-16.14-11.13Z" />
+    <path fill="#FFA8A9" class="in-top"
+      d="m13.74,27.83c-8.13,11.1,31.29,27.86,37.97,27.8,6.79-.07,17.38-22.8,11.1-32.56-4.94-7.69-23.55-7.26-31.54-5.71-11.23,2.18-17.54,10.48-17.54,10.48Z" />
+    <path fill="#0B4F6C" class="in-bottom"
+      d="m122.05,93.42c3.97-5.45-2-15.14-7.57-19.71-5.57-4.57-13,11.57-18.71,15.57-4.27,2.99-3.41,11.69-2.71,15.91.28,1.65,1.42,3.05,3.02,3.55,4.32,1.33,13.79,1.41,25.97-15.31Z" />
+  </svg>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+    <div class="container">
+      <a class="navbar-brand fs-4 text-white" href="...\air\index.html">
+        <img src="mistyLogo.png" alt="LOGO" width="40" height="40" class="d-inline-block align-text-center">
+        MistyCode
+      </a>
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header text-white border-bottom">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+            <img src="mistyLogo.png" alt="LOGO" width="40" height="40" class="d-inline-block align-text-center">
+            MistyCode
+          </h5>
+          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column p-5">
+          <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+            <li class="nav-item mx-2">
+              <a class="nav-link active" aria-current="page" href="/CommunityMain.html">Comunidad</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link " href="#usuario">Usuario</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#tareas">Tareas</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="/TutorMain.html">Tutor</a>
+            </li>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#chat">Chat</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron vertical-center align-items-center">
+    <div class="container align-items-center" id="cardContainer">
+      <div class="row-md">
+        <div class="card" id="TutorCard">
+          <div class="row justify-content-center">
+            <div class="col-md-4 d-flex">
+              <img src="generic-tutor.jpeg" class="img-fluid" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <div class="card-section flex-grow-1 ms-3">
+                  <h5 class="card-title">Tutor McTutorFace</h5>
+                  <p class="card-text">Correo de contacto: tutor@correo.mail</p>
+                  <p class="card-text">Imaginate que hay una descripcion aqui</p>
+                  <a href="#tutor" class="btn btn-primary" id="btnTutor">Ver perfil</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row-md">
+        <div class="card" id="StudentCard">
+          <div class="row justify-content-center">
+            <div class="col-md-4 d-flex">
+              <img src="generic-tutor.jpeg" class="img-fluid" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <div class="card-section flex-grow-1 ms-3">
+                  <h5 class="card-title">Alumno Alumnado</h5>
+                  <p class="card-text">Correo Institucional: alumno@student.school</p>
+                  <p class="card-text">Semestre Cursado: Decimo Octavo Semestre</p>
+                  <p class="card-text">Carrera: Odontologia Veterinaria</p>
+                  <a href="#usuario" class="btn btn-primary" id="btnStudent">Editar perfil</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</body>
+
+</html>

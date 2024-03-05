@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="QuestionStyle.css">
+    <title>Question</title>
+</head>
+
+<body>
+    <div class="top-bar">
+        <h1>Pregunta</h1>
+    </div>
+
+    <div class="main">
+        <div class="header">
+        </div>
+
+        <textarea></textarea>
+        <button>Añadir Respuesta</button>
+        <div class="comments">
+        </div>
+    </div>
+
+    <script src="QuestionsData.js"></script>
+    <script>
+        var id = window.location.search.slice(1);
+        if (id) {
+            var id = id.split('=')[1];
+        }
+        var thread = threads.find(t => t.id == id);
+        console.log(thread);
+        var header = document.querySelector('.header');
+        var headerHTML = `
+        <div class="header">
+            <h4 class="title">
+                ${thread.title}
+            </h4>
+            <div class="bottom">
+                <p class="timestamp">
+                    ${new Date(thread.date).toLocaleString()}
+                </p>
+                <p class="commentsnum">
+                    ${thread.comments.length} Respuestas
+                </p>
+            </div>
+        </div>
+        `
+        header.insertAdjacentHTML('beforeend', headerHTML);
+
+        function addComment(comment) {
+            var commentHTML = `
+            <div class="comment">
+                <div class="top-comment">
+                    <p class="user">
+                        ${comment.author}
+                    </p>
+                    <p class="comment-ts">
+                        ${new Date(thread.date).toLocaleString()}
+                    </p>
+                </div>
+                <div class="comment-content">
+                    ${comment.content}
+                </div>
+            </div>
+            `
+
+            comments.insertAdjacentHTML('beforeend', commentHTML);
+        }
+
+        var comments = document.querySelector('.comments');
+        for (let comment of thread.comments) {
+            addComment(comment);
+        }
+
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            var txt = document.querySelector('textarea');
+            var comment = {
+                content: txt.value,
+                date: Date.now(),
+                author: "Mods",
+            }
+            addComment(comment);
+            document.querySelector('textarea').value = '';
+        });
+    </script>
+</body>
+
+</html>

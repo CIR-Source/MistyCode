@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CommunityStyle.css">
+    <title>Comunidad</title>
+</head>
+
+<body>
+    <div class="top-bar">
+        <h1>Comunidad</h1>
+    </div>
+
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+
+    <div class="main">
+        <ol>
+        </ol>
+    </div>
+    <script src="QuestionsData.js"></script>
+    <script>
+        console.log(threads);
+        var container = document.querySelector('ol');
+        for (let thread of threads) {
+            var html = `
+            <li class="row">
+                <div class="content">
+                    <a href="/ComsQuestion.html?id=${thread.id}">
+                        <h4 class="title">
+                            ${thread.title}
+                        </h4>
+                        <div class="bottom">
+                            <p class="timestamp">
+                                ${new Date(thread.date).toLocaleString()}
+                            </p>
+                            <p class="commentsnum">
+                                ${thread.comments.length} Respuestas
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            `
+
+            container.insertAdjacentHTML('beforeend', html);
+        }
+    </script>
+</body>
+
+</html>
