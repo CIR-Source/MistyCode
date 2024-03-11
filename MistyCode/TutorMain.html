@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TutorStyle.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -14,10 +15,150 @@
 
 <body class="vh-100 overflow-auto">
 
-    <div class="container d-flex align-items-center justify-content-center">
-        <img src="blahaj-spin.gif" alt="epikspin">
-    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidyMid slice" viewBox="0 0 100 100">
+        <defs>
+            <style>
+                @keyframes rotate {
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
 
+                .out-ltop {
+                    animation: rotate 20s linear infinite;
+                    transform-origin: 10px 11px;
+                }
+
+                .in-ltop {
+                    animation: rotate 10s linear infinite;
+                    transform-origin: 10px 11px;
+                }
+
+                .out-rtop {
+                    animation: rotate 25s linear infinite;
+                    transform-origin: 83px 19px;
+                }
+
+                .in-rtop {
+                    animation: rotate 20s linear infinite;
+                    transform-origin: 83px 19px;
+                }
+
+                .out-lbottom {
+                    animation: rotate 10s linear infinite;
+                    transform-origin: 11px 83px;
+                }
+
+                .in-lbottom {
+                    animation: rotate 10s linear infinite;
+                    transform-origin: 11px 83px;
+                }
+
+                .out-rbottom {
+                    animation: rotate 15s linear infinite;
+                    transform-origin: 97px 89px;
+                }
+
+                .in-rbottom {
+                    animation: rotate 15s linear infinite;
+                    transform-origin: 97px 89px;
+                }
+            </style>
+        </defs>
+        <path fill="#D5C185" class="out-ltop"
+            d="M-4.89,17.42L-5.45,5.06C-5.52,3.59-4.64,2.23-3.27,1.7l15.09-5.88c1.23-0.48,2.63-0.21,3.6,0.7l11.1,10.4
+        c1.11,1.04,1.4,2.68,0.73,4.04l-6.83,13.73c-0.75,1.51-2.5,2.26-4.11,1.75l-18.79-5.89C-3.86,20.11-4.82,18.86-4.89,17.42z" />
+        <path fill="#FAEDCD" class="in-ltop" d="M5.3,4.4l-7.22,6.59c-0.69,0.63-0.57,1.75,0.24,2.22l12.36,7.14c1.85,1.07,4.18-0.2,4.29-2.34l0.66-13.42
+	c0.06-1.17-0.97-2.09-2.12-1.92L6.89,3.64C6.3,3.73,5.74,3.99,5.3,4.4z" />
+        <path fill="#CCD5AE" class="out-rtop" d="M66.42,19.87c-0.08,1.75,1.86,2.81,3.32,1.85c3.1-2.04,3.15,0.44,5.47,4.11c3.84,6.09,7.11,17.92,14.07,12.24
+	c6.96-5.68,12.26-11.51,10.43-19.03C97.88,11.52,93.14-0.47,86.1,3.03c-7.04,3.5-19.16,4.97-19.52,13.22L66.42,19.87z" />
+        <path fill="#D4A373" class="in-rtop" d="M89.38,27.44c0,0,5.51-10.03-0.23-13.81s-13.1-3.6-13.22,2.15c-0.12,5.75,2.03,9.95,6.56,11.99
+	C87.03,29.83,89.38,27.44,89.38,27.44z" />
+        <path fill="#CCD5AE" class="out-lbottom" d="M22.04,89.33C15.82,106.14-2.92,105-4.31,104.74S-7.56,75.28,5.1,71.98s12.65-9.47,18.92-10.69
+	c6.27-1.22,11.62,14.23,4.19,16.04C20.77,79.12,22.04,89.33,22.04,89.33z" />
+        <path fill="#D4A373" class="in-lbottom" d="M6.65,89.8c-2.7,0.63-4.69-2.51-3.01-4.72c3.36-4.43,8.28-10.06,11.31-9.74c4.95,0.52,6.01,6.97-1.26,11.51
+	C11.16,88.43,8.74,89.31,6.65,89.8z" />
+        <path fill="#D5C185" class="out-rbottom" d="M97.02,98.76c10.29-0.95,31.24-6.13,24.95-16.02c-6.29-9.89-22.1-14.57-28-10.71
+	c-5.9,3.87-9.91,22.34-14.29,22.53c-4.38,0.19-11.62,10.29-6.29,12.38c5.33,2.1,16-2.67,21.72-0.95
+	C100.83,107.71,97.02,98.76,97.02,98.76z" />
+        <path fill="#FAEDCD" class="in-rbottom" d="M84.47,100.04c-1.7,0-2.84-1.75-2.15-3.31c3.14-7.08,8.46-18.48,12.82-17.84c5.14,0.76,18.48-3.81,17.33,3.24
+	c-1.14,7.05-2.67,10.48-7.24,9.71S88.09,100.04,84.47,100.04L84.47,100.04z" />
+        <!-- <circle cx="11.34" cy="83.26" r="0.98" />
+        <circle cx="83.34" cy="19.59" r="0.82" />
+        <circle cx="97.33" cy="89.08" r="0.77" />
+        <circle cx="10.02" cy="11.87" r="0.9" /> -->
+    </svg>
+
+    <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
+        <div class="container">
+            <a class="navbar-brand fs-4 text-black" href="...\air\index.html">
+                <img src="mistyLogo.png" alt="LOGO" width="40" height="40" class="d-inline-block align-text-center">
+                MistyCode
+            </a>
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header text-white border-bottom">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                        <img src="mistyLogo.png" alt="LOGO" width="40" height="40"
+                            class="d-inline-block align-text-center">
+                        MistyCode
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column p-5">
+                    <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active" aria-current="page" href="/CommunityMain.html">Comunidad</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link " href="#usuario">Usuario</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#tareas">Tareas</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="/TutoredList.html">Lista de Tutorados</a>
+                        </li>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#chat">Chat</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron vertical-center align-items-center">
+        <div class="container align-items-center" id="cardContainer">
+            <div class="row-md">
+                <div class="card" id="TutorCard">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 d-flex">
+                            <img src="generic-tutor.jpeg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <div class="card-section flex-grow-1 ms-3">
+                                    <h5 class="card-title">Tutor McTutorFace</h5>
+                                    <p class="card-text">Correo de contacto: tutor@correo.mail</p>
+                                    <p class="card-text">Numero de tutorados: 100</p>
+                                    <p class="card-text">Materia Impartida: Bioquimica animal</p>
+                                    <p class="card-text">Imaginate que hay una descripcion aqui</p>
+                                    <a href="#tutor" class="btn btn-primary" id="btnTutor">Editar Perfil</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

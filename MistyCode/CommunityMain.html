@@ -13,23 +13,25 @@
         <h1>Comunidad</h1>
     </div>
 
-    <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div>
-
-
     <div class="main">
         <ol>
         </ol>
+
+        <div class="questionCont">
+            <textarea></textarea>
+            <button>Hacer Pregunta</button>
+        </div>
     </div>
+
     <script src="QuestionsData.js"></script>
     <script>
         console.log(threads);
         var container = document.querySelector('ol');
         for (let thread of threads) {
+            addQuestion(thread)
+        }
+
+        function addQuestion(thread) {
             var html = `
             <li class="row">
                 <div class="content">
@@ -52,6 +54,23 @@
 
             container.insertAdjacentHTML('beforeend', html);
         }
+
+        var counter = 3;
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            var txt = document.querySelector('textarea');
+            var thread = {
+                id: counter,
+                title: txt.value,
+                author: "Mods",
+                date: Date.now(),
+                content: "Thread content",
+                comments: []
+            }
+            addQuestion(thread);
+            document.querySelector('textarea').value = '';
+            counter = counter + 1;
+        });
     </script>
 </body>
 

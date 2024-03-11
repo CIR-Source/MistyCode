@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ListStyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <title>Lista de Tutorados</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
+        <div class="container">
+            <a class="navbar-brand fs-4 text-black" href="...\air\index.html">
+                <img src="mistyLogo.png" alt="LOGO" width="40" height="40" class="d-inline-block align-text-center">
+                MistyCode
+            </a>
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header text-white border-bottom">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                        <img src="mistyLogo.png" alt="LOGO" width="40" height="40"
+                            class="d-inline-block align-text-center">
+                        MistyCode
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column p-5">
+                    <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active" aria-current="page" href="/CommunityMain.html">Comunidad</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link " href="TutorMain.html">Usuario</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#tareas">Tareas</a>
+                        </li>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#chat">Chat</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="Listcontainer">
+        <h2>Lista de Tutorados</h2>
+        <ul class="responsive-table">
+            <li class="table-header">
+                <div class="col col-1">Matricula</div>
+                <div class="col col-2">Nombre</div>
+                <div class="col col-3">Semestre</div>
+                <div class="col col-4">Correo</div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="Job Id">42235</div>
+                <div class="col col-2" data-label="Customer Name">John Doe</div>
+                <div class="col col-3" data-label="Amount">Octavo</div>
+                <div class="col col-4" data-label="Payment Status">al042235@uacam.mx</div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="Job Id">42442</div>
+                <div class="col col-2" data-label="Customer Name">Jennifer Smith</div>
+                <div class="col col-3" data-label="Amount">$220</div>
+                <div class="col col-4" data-label="Payment Status">Pending</div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="Job Id">42257</div>
+                <div class="col col-2" data-label="Customer Name">John Smith</div>
+                <div class="col col-3" data-label="Amount">$341</div>
+                <div class="col col-4" data-label="Payment Status">Pending</div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="Job Id">42311</div>
+                <div class="col col-2" data-label="Customer Name">John Carpenter</div>
+                <div class="col col-3" data-label="Amount">$115</div>
+                <div class="col col-4" data-label="Payment Status">Pending</div>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
